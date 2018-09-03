@@ -1,0 +1,29 @@
+ssl/itls/HAL_TLS_itls.o: \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/platform/ssl/itls/HAL_TLS_itls.c \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/ssl.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/config.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/check_config.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/ssl_ciphersuites.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/cipher.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/md.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/platform.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/platform_alt.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/net.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/net_sockets.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/ssl.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import/ubuntu/include/itls/debug.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/itls.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/iot_import.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/iot_export.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_errno.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_mqtt.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_shadow.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_coap.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_ota.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_http.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_cmp.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_dm.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/exports/iot_export_fota.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/imports/iot_import_config.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/imports/iot_import_product.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/sdk-impl/itls.h

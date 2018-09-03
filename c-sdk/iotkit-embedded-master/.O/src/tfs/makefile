@@ -1,0 +1,40 @@
+MODULE_NAME := src/tfs
+ALL_SUB_DIRS := sample src/cmp src/coap src/cota src/dm src/fota src/http src/log src/mqtt src/ota src/platform src/sdk-tests src/shadow src/subdev src/system src/tfs src/tls src/utils
+AR := ar
+CC := gcc
+CFLAGS := --coverage -DCMP_ENABLED -DCMP_VIA_MQTT_DIRECT -DCONFIG_GUIDER_AUTH_TIMEOUT=500 -DCONFIG_HTTP_AUTH_TIMEOUT=500 -DCONFIG_MID_HTTP_TIMEOUT=500 -DDM_ENABLED -DHTTP_COMM_ENABLED -DIOTX_NET_INIT_WITH_PK_EXT -DIOTX_WITHOUT_ITLS -DMQTT_COMM_ENABLED -DMQTT_DIRECT -DMQTT_DIRECT_NOITLS -DMQTT_SHADOW -DOTA_ENABLED -DOTA_SIGNAL_CHANNEL=1 -DSERVICE_OTA_ENABLED -DSUBDEV_VIA_MQTT -DUSING_SHA1_IN_HMAC -DUSING_UTILS_JSON -D_PLATFORM_IS_LINUX_ -D__UBUNTU_SDK_DEMO__ -Os -Wall -g3 -rdynamic
+COMP_LIB := libiot_sdk.a
+CONFIG_VENDOR := ubuntu
+CROSS_CANDIDATES := AR CC CXX LD OBJCOPY STRIP
+CROSS_PREFIX := 
+CXX := g++
+IMPORT_DIR := /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/import
+INSTALL_DIR := /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/.O/usr
+INSTALL_LIB_DIR := /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/.O/usr/lib
+KERNEL_DIR := 
+LD := ld
+LDFLAGS := -lpthread
+MAKE_ENV_VARS := 
+OBJCOPY := objcopy
+PACKAGE_DIR := /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/packages
+RULE_DIR := /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/build-rules
+STRIP := strip
+SYSROOT_INC := /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/.O/usr/include
+TOP_DIR := /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master
+
+include $(RULE_DIR)/settings.mk
+include $(CONFIG_TPL)
+
+all:
+
+LIBA_TARGET := libiot_tfs.a
+HDR_REFS    := src
+
+env:
+	@echo ""
+	@printf -- "-----------------------------------------------------------------\n"
+	@$(foreach var,$(SHOW_ENV_VARS),$(call Dump_Var,$(var)))
+	@printf -- "-----------------------------------------------------------------\n"
+	@echo ""
+
+include $(RULE_DIR)/rules.mk

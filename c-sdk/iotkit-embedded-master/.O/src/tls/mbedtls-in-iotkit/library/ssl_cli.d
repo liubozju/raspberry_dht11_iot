@@ -1,0 +1,23 @@
+mbedtls-in-iotkit/library/ssl_cli.o: \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/library/ssl_cli.c \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/config.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/check_config.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/platform.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/config.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/debug.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/ssl.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/bignum.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/ecp.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/ssl_ciphersuites.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/pk.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/md.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/rsa.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/cipher.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/x509_crt.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/x509.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/asn1.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/x509_crl.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/ssl.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/ssl_internal.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/sha1.h \
+ /home/liubo/raspberry_dht11_iot/c-sdk/iotkit-embedded-master/src/tls/mbedtls-in-iotkit/include/mbedtls/sha256.h

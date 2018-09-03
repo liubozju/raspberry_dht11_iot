@@ -11,7 +11,7 @@
 #include <stdint.h>
 
 #define MAXTIMINGS	85
-#define DHTPIN		9
+#define DHTPIN		7
 int dht11_dat[5] = { 0, 0, 0, 0, 0 };
 
 void delayMicrosecondsHard (unsigned int howLong); 
@@ -70,9 +70,9 @@ void dht11_read(float * temperature,float * humidity)
 		digitalWrite( DHTPIN, HIGH );
 		if(readbuf[4]==(readbuf[0]+readbuf[1]+readbuf[2]+readbuf[3]))
 		{
-			* temperature = readbuf[0]+((float)readbuf[1])/10.0;
-			* humidity = readbuf[2]+((float)readbuf[3])/10.0;
-			printf("temperature:%.1f   humidity:%.1f\r\n",* temperature, *humidity);
+			* temperature = readbuf[2]+((float)readbuf[3])/10.0;
+			* humidity = readbuf[0]+((float)readbuf[1])/10.0;
+			//printf("temperature:%.1f   humidity:%.1f\r\n",* temperature, *humidity);
 		}
 		else
 			printf("the check is wrong\r\n");
