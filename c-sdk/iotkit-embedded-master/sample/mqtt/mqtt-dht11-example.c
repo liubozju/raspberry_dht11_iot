@@ -21,6 +21,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <dht11_iot.h>
 
 #include "iot_import.h"
 #include "iot_export.h"
@@ -227,26 +228,9 @@ int mqtt_client(void)
 
     /* Initialize topic information */
     memset(&topic_msg, 0x0, sizeof(iotx_mqtt_topic_info_t));
-    strcpy(msg_pub, "update: hello! start!");
-
-    topic_msg.qos = IOTX_MQTT_QOS1;
-    topic_msg.retain = 0;
-    topic_msg.dup = 0;
-    topic_msg.payload = (void *)msg_pub;
-    topic_msg.payload_len = strlen(msg_pub);
-
-    rc = IOT_MQTT_Publish(pclient, TOPIC_UPDATE, &topic_msg);
-    if (rc < 0) {
-        IOT_MQTT_Destroy(&pclient);
-        EXAMPLE_TRACE("error occur when publish");
-        rc = -1;
-        goto do_exit;
-    }
-
-    EXAMPLE_TRACE("\n publish message: \n topic: %s\n payload: \%s\n rc = %d", TOPIC_UPDATE, topic_msg.payload, rc);
     
     /* Subscribe the specific topic */
-    rc = IOT_MQTT_Subscribe(pclient, TOPIC_DATA, IOTX_MQTT_QOS1, _demo_message_arrive, NULL);
+    rc = IOT_MQTT_Subscribe(pclient, TOPIC_GET, IOTX_MQTT_QOS1, _demo_message_arrive, NULL);
     if (rc < 0) {
         IOT_MQTT_Destroy(&pclient);
         EXAMPLE_TRACE("IOT_MQTT_Subscribe() failed, rc = %d", rc);
@@ -255,24 +239,20 @@ int mqtt_client(void)
     }
 
     /* Initialize topic information */
-    memset(msg_pub, 0x0, 128);
-    strcpy(msg_pub, "data: hello! start!");
     memset(&topic_msg, 0x0, sizeof(iotx_mqtt_topic_info_t));
     topic_msg.qos = IOTX_MQTT_QOS1;
     topic_msg.retain = 0;
     topic_msg.dup = 0;
-    topic_msg.payload = (void *)msg_pub;
-    topic_msg.payload_len = strlen(msg_pub);
-
-    rc = IOT_MQTT_Publish(pclient, TOPIC_DATA, &topic_msg);
-    EXAMPLE_TRACE("\n publish message: \n topic: %s\n payload: \%s\n rc = %d", TOPIC_DATA, topic_msg.payload, rc);
 
     IOT_MQTT_Yield(pclient, 200);
 
     do {
         /* Generate topic message */
+	float temperature=0.0;
+	float humidity=0.0;
+	dht11_read(&temperature,&humidity);
         cnt++;
-        msg_len = snprintf(msg_pub, sizeof(msg_pub), "{\"attr_name\":\"temperature\", \"attr_value\":\"%d\"}", cnt);
+        msg_len = snprintf(msg_pub, sizeof(msg_pub), "{\"temperature\":\"%.1f\", \"humidity\":\"%.1f\"}",temperature,humidity);
         if (msg_len < 0) {
             EXAMPLE_TRACE("Error occur! Exit program");
             rc = -1;
@@ -310,7 +290,7 @@ int mqtt_client(void)
         
     IOT_MQTT_Yield(pclient, 200);
 
-    IOT_MQTT_Unsubscribe(pclient, TOPIC_DATA);
+    IOT_MQTT_Unsubscribe(pclient, TOPIC_GET);
 
     IOT_MQTT_Yield(pclient, 200);
 

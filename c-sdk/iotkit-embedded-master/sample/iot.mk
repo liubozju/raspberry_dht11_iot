@@ -2,6 +2,7 @@ DEPENDS             := src/platform
 HDR_REFS            += src/sdk-impl src/utils src/log src/packages/LITE-utils
 LDFLAGS             := -liot_sdk
 LDFLAGS             += -liot_platform
+LDFLAGS		    += -l wiringPi
 ifneq (,$(filter -DIOTX_WITHOUT_ITLS,$(CFLAGS)))
 LDFLAGS             += -Bstatic -liot_tls
 endif 
@@ -13,8 +14,9 @@ CFLAGS              := $(filter-out -DCOAP_COMM_ENABLED,$(CFLAGS))
 endif
 
 ifneq (,$(filter -DMQTT_COMM_ENABLED,$(CFLAGS)))
-TARGET              += mqtt-example mqtt_rrpc-example mqtt_multi_thread-example
+TARGET              += mqtt-example mqtt_rrpc-example mqtt_multi_thread-example mqtt-dht11-example
 SRCS_mqtt-example   := mqtt/mqtt-example.c
+SRCS_mqtt-dht11-example   := mqtt/mqtt-dht11-example.c mqtt/dht11_iot.c
 SRCS_mqtt_rrpc-example := mqtt/mqtt_rrpc-example.c
 SRCS_mqtt_multi_thread-example := mqtt/mqtt_multi_thread-example.c
 

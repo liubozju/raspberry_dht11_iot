@@ -1,5 +1,5 @@
 CONFIG_ENV_CFLAGS   += \
-    -Os -Wall -Werror \
+    -Os -Wall  \
     -D_PLATFORM_IS_WINDOWS_ \
     -DUSING_UTILS_JSON \
     -DIOTX_NET_INIT_WITH_PK_EXT \
